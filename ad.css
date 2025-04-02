@@ -1,0 +1,66 @@
+body{
+    /* background: linear-gradient(45deg,#d2001a,#7462ff,#f48e21,#23d5ab); */
+    text-align: center;
+    color: white;
+    height: 236.4vh;
+    width: 100%;
+    background: linear-gradient(45deg,#18122B,#393053,#443C68,#635985);
+    background-size: 300% 300%;
+    animation:  color 12s ease-in-out infinite;
+}
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+.judul{
+    text-align:right;
+}
+.adlantun{
+text-align: left; /* Rata kanan */
+width: 30%; /* Atur lebar elemen sesuai kebutuhan */
+margin: 0 auto; /* Tengah horizontal */
+margin-bottom: 10%;
+margin-left: 600px;
+}
+.mars{
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+    margin-left: 0px;
+}
+.pendiri{
+    text-align: left;
+    width:16%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    margin-left: 683px;
+}
+.mantum{
+    text-align: left;
+    width:30%;
+    margin: 0 auto;
+    margin-left: 580px;
+    margin-bottom: 10%;
+}
+
+.nef{
+    color: #ffffff;
+    font-size: 100px;
+    text-decoration: none;
+}
+.yel{
+    font-size: 50px;
+    margin: center;
+}
+.back{
+    color: whitesmoke;
+    margin-right: 90%;
+}
+
