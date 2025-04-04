@@ -1,12 +1,12 @@
 body{
     /* background: linear-gradient(45deg,#d2001a,#7462ff,#f48e21,#23d5ab); */
     text-align: center;
-    color: white;
+    color: black;
     height: 236.4vh;
     width: 100%;
-    background: linear-gradient(45deg,#18122B,#393053,#443C68,#635985);
+    background: linear-gradient(45deg,#FBFBFB,#E8F9FF,#FFFFFF,#FFF9F9); 
     background-size: 300% 300%;
-    animation:  color 12s ease-in-out infinite;
+    animation:  color 20s ease-in-out infinite;
 }
 @keyframes color{
     0%{
@@ -23,35 +23,45 @@ body{
     text-align:right;
 }
 .adlantun{
-text-align: left; /* Rata kanan */
+text-align: left; /* Rata kiri */
 width: 30%; /* Atur lebar elemen sesuai kebutuhan */
 margin: 0 auto; /* Tengah horizontal */
-margin-bottom: 10%;
-margin-left: 600px;
+margin-bottom: 10%; /* jarak bawah */
+/* margin-left: 600px;jarak kekiri */
 }
 .mars{
-    text-align: left;
-    width: 50%;
+    text-align: center;
+    width: 100%;
     margin: 0 auto;
-    margin-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.audio{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border-radius: 20%;
 }
 .pendiri{
-    text-align: left;
-    width:16%;
-    margin: 0 auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
     margin-bottom: 10%;
-    margin-left: 683px;
 }
 .mantum{
-    text-align: left;
-    width:30%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
     margin: 0 auto;
-    margin-left: 580px;
+    /* margin-left: 580px; */
     margin-bottom: 10%;
 }
 
 .nef{
-    color: #ffffff;
+    color: black;
     font-size: 100px;
     text-decoration: none;
 }
@@ -60,7 +70,100 @@ margin-left: 600px;
     margin: center;
 }
 .back{
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     margin-right: 90%;
 }
 
+
+/* RESPOSNSHIF */
+@media screen and (min-width: 500px){
+    .body{
+        background-color: whitesmoke;
+    }
+}
+@media screen and (max-width:476px){
+    .adlantun{
+        width: 90%;
+    }
+    .mars{ 
+        width: 88%;
+        text-align: left;
+        margin: center;
+    }
+    .pendiri{
+        width: 45%;
+        text-align: left;
+        margin: center;
+    }
+    .mantum{
+        text-align: left;
+        margin:center;
+        width: 95%;
+    }
+}
+
+
+/* TIDAK DAPAT DI TIMPA 
+@media (min-width:1000px)and(max-width:1436px){
+    .adlantun{
+        width: 60%;
+        margin-left: 450px;
+    }
+    .mars{ 
+        width: 88%;
+        text-align: left;
+        margin: center;
+        margin-right: 500px;
+    }
+    .pendiri{
+        width: 45%;
+        text-align: left;
+        margin: center;
+        margin-right: 150px;
+    }
+    .mantum{
+        text-align: left;
+        margin:center;
+        width: 35%;
+        margin-right: 400px;
+    }
+    .audio{
+        margin-top: 80px;
+        width: 45%;
+        margin-left: 600px;
+    }
+} */
+
+/* @media screen and (min-width:477px;)and(max-width:1450px) {
+    }
+    .seluruh{
+        margin-right: 50px;
+    }
+    .adlantun{
+        width: 60%;
+        margin-left: 450px;
+    }
+    .mars{ 
+        width: 88%;
+        text-align: left;
+        margin: center;
+        margin-right: 500px;
+    }
+    .pendiri{
+        width: 45%;
+        text-align: left;
+        margin: center;
+        margin-right: 150px;
+    }
+    .mantum{
+        text-align: left;
+        margin:center;
+        width: 35%;
+        margin-right: 400px;
+    }
+    .audio{
+        margin-top: 80px;
+        width: 45%;
+        margin-left: 500px;
+    }
+ */
