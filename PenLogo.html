@@ -4,33 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logo & Kesek</title>
-    <link rel="shortcut icon" href="logo/Lingkaran-putih-min.ico"type="image/x-icon">
+    <link rel="shortcut icon" href="../MY DImensi/logo/Lingkaran-putih-min.ico"type="image/x-icon">
 <style>
     body{
        
     }
-      .logo{
-        justify-items: center;
-        text-align: center;
+   .image-countainer img{       /* img untuk mengatur ukuran gambar wajib digunakan agar div dapat di atur*/
+        width: 1050px;
+        height: auto;
+        margin: 0px;
+        margin-left: 200px;
       }
+      .fountg img{
+        width: 1470px;
+        height: auto;
+        margin-right: 60px;
+        background-color: aliceblue;
+    }
       .back{
         color:black;
+        margin-right: 100px;
       }
       .kesek{
         text-align: center;
+        margin-right: 100px ;
       }
+
+       
+      /* GAMBARNYA  */ 
+     .images{
+     margin-top: 5px;
+     display: flex; /* buat mengabungkan gambar ke kanan  */ 
+     width: 210%; 
+     transition: 2s;/* memberis wakstu slomosion */ 
+     margin-bottom: 3%;
+     }
+     .wrapper{
+     margin: auto;
+     border-radius: 5px;
+     overflow: hidden;
+     position: relative;
+     }
+     #slide-1:target ~ .images{
+     margin-left: 0px;
+     }
+     #slide-2:target ~ .images{
+     margin-left: -100%;
+     }  
+
+  .navigation a{
+      text-decoration: none;
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      background-color: hsla(0, 0%, 5%, 0.09);
+      font-size: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      border-radius: 50px;
+      margin: 20px;
+      transition: 1s;
+      color: black;
+  }
+  .navigation a:hover {
+      background-color: rgb(166, 255, 0);
+
+  }
+  .navigation{
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      margin-top: -50px;
+  }
+
+
+     /* @media screen and (min-width: 500px){
+          .body{
+        background-color: whitesmoke;
+            }
+       }
+     @media screen and (max-width:476px){
+          .images{
+            width: 10600px;
+          }          
+       } */
 </style>
 </head>
 <body>
-    <div class="logo">
-    <img src="logo/PenjelasanLogo.jpg" width="1065" height="auto"></div>
-    <a class="back" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
-        <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895"/>
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
-      </svg></a><br>
-    <hr>
-    <div class="kesek">
-    <h1>KESEKRATIRAITAN</h1>
-    <img src="logo/Kesekratiraitan.png" width="1065" height="auto"></div>
+<div class="wrapper">
+       <div class="slide">
+           <span id="slide-1"></span>
+           <span id="slide-2"></span>
+  
+       <div class="images">
+         <div class="image-countainer">
+             <img src="../MY DImensi/logo/PenjelasanLogo.jpg"></div>
+             <hr>
+
+
+          <div class="kesek">
+              <h1 style="margin-left: 55px; margin-bottom: 4%;">KESEKRETARIATAN</h1>
+
+
+          <div class="fountg">
+              <img src="../MY DImensi/logo/kesek.jpg"></div></div> 
+         </div>
+
+      </div>
+
+    <div class="navigation">
+      <a href="#slide-1"><</a>
+      <a href="#slide-2">></a>
+    </div>
+
+  </div>
+    <a class="back" href="../MY DImensi/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"/>
+      <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+      <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+    </svg></a><br><hr>
 </body>
 </html>
