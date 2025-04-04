@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KODE</title>
+    <link rel="shortcut icon" href="../MY DImensi/logo/warning.png" type="image/x-icon"/>
+    <style>
+        * {
+            background-color: rgb(241, 234, 234);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            text-align: center;
+            margin-top: 20%;
+            position: relative;
+        }
+
+        .box button {
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(0, 195, 255);
+            border-radius: 10px;
+            padding: 2px 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+            background: rgb(0, 195, 255);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        .box button:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+            box-shadow: 0 0 15px rgb(0, 194, 253);
+        }
+
+        /* Diamond Shape Stars */
+        .stars {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            transform: rotate(45deg);
+            box-shadow: 0 0 10px white;
+            opacity: 1;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-in-out;
+        }
+
+        .stars.large {
+            width: 10px;
+            height: 10px;
+        }
+        .ok{
+            color:black;
+            text-align: left;
+            margin-top: 300px;
+            margin-left: 650px;
+        }
+        .input{
+            margin-top: 15px;
+            margin-bottom: 3px;
+            margin-left: 15px;
+        }
+        .back{
+            color: black;
+        }
+    @media screen and (max-width: 476px){
+    .body{
+        background-color: whitesmoke;
+     }
+     }
+
+     @media screen and (max-width:476px){
+        .ok{
+            margin-left: 140px;
+        }
+      
+     }
+    </style>
+</head>
+<body>
+    <!-- > -->
+    <div class="ok">
+        <h3>Siapa nama bapa ditra ?</h3>
+        <p class="input"><input type="password" id="password" placeholder="  List password "></p>
+        <a> isi sandi !<a style="margin-left: 75px;"  class="box"> <!-- <button onclick="func()">LOGIN</button></a>-->
+            <button id="glowButton" onclick="func()">Login</button></a>
+
+           <p><a class="back" href="../MY DImensi/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"/>
+                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                </svg></a></p> </div>
+      </section>
+      <script>
+        function func(){
+          var pass = document.getElementById('password').value;
+          if(pass == 'SUMAR'){
+            alert('selamat saudara saudari pasword anda benar')
+            window.location.assign("../MY DImensi/ditra23.html")
+          }
+          else if(pass == 'DITRA'){
+            alert('! Peringatan kode ini adalah sandi cadangan')
+            window.location.assign("../MY DImensi/ditra23.html")
+          }
+          else{
+            alert("Maaf anda belum memasukkan sandi atau anda masih salah, gunakan 5 uruf dan besar !")
+          }
+        }
+      </script> 
+      <!-- < -->
+    
+
+    <script>
+        const button = document.getElementById("glowButton");
+        let stars = [];
+
+        button.addEventListener("mouseover", () => {
+            removeStars();
+            for (let i = 0; i < 5; i++) { 
+                let star = document.createElement("div");
+                star.classList.add("stars");
+                if (Math.random() > 0.5) star.classList.add("large");
+                document.body.appendChild(star);
+
+                let buttonRect = button.getBoundingClientRect();
+                let startX = Math.random() * buttonRect.width + buttonRect.left;
+                let startY = Math.random() * buttonRect.height + buttonRect.top;
+                
+                star.style.left = `${startX}px`;
+                star.style.top = `${startY}px`;
+
+                setTimeout(() => {
+                    let angle = Math.random() * 2 * Math.PI;
+                    let distance = Math.random() * 50 + 20;
+                    let moveX = Math.cos(angle) * distance;
+                    let moveY = Math.sin(angle) * distance;
+                    star.style.transform = `rotate(45deg) translate(${moveX}px, ${moveY}px)`;
+                    star.style.opacity = "1";
+                }, 50);
+                
+                stars.push(star);
+            }
+        });
+
+        button.addEventListener("mouseleave", () => {
+            removeStars();
+        });
+
+        function removeStars() {
+            stars.forEach(star => {
+                star.style.opacity = "0";
+                setTimeout(() => star.remove(), 500);
+            });
+            stars = []; 
+        }
+    </script>
+    
+</body>
+</html>
